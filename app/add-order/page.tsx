@@ -3,7 +3,12 @@ import {
   Button,
   Card,
   Flex,
-  FormErrorMessage,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
   NumberDecrementStepper,
   NumberIncrementStepper,
   NumberInput,
@@ -17,24 +22,21 @@ import { Controller } from 'react-hook-form'
 import { customers, products } from '../../Utils/Constsnt'
 import { TemporaryFactorTable } from '../../components/AddOrder/TemporaryFactorTable'
 import { useAddOrder } from './AddOrder.biz'
-import { useEffect, useState } from 'react'
-const AddOrder = () => {
-  // const [productValidate, setProductValidate] = useState(false)
+import { AddCustomerComponent } from '../../components/AddCustomer/AddCustomerComponent'
 
+const AddOrder = () => {
   const {
     control,
     onSubmit,
     register,
-    handleReset,
     productList,
     handleSubmit,
     selectedProduct,
+    productValidate,
     setSelectedProduct,
+    modalVisible,
+    setModalVisible,
   } = useAddOrder()
-
-  const productValidate = (p: any) => {
-    return !productList.some((obj: any) => obj.product === p)
-  }
 
   return (
     <chakra.div p={{ base: '1', md: '4' }} gap='4'>
@@ -53,7 +55,7 @@ const AddOrder = () => {
               <Text mb='2' fontWeight='semibold' fontSize='md'>
                 مشتری
               </Text>
-              <Button size='sm' colorScheme='blue'>
+              <Button size='sm' colorScheme='blue' onClick={setModalVisible.on}>
                 ایجاد مشتری جدید
               </Button>
             </Flex>
@@ -155,11 +157,26 @@ const AddOrder = () => {
             >
               افزودن
             </Button>
-           
           </Flex>
         </Card>
       </chakra.form>
       {productList.length && <TemporaryFactorTable productList={productList} />}
+      {modalVisible && (
+        <Modal isOpen={modalVisible} onClose={setModalVisible.off} size='xl'>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>معرفی مشتری</ModalHeader>
+            <ModalCloseButton w='95%' justifyContent='end' />
+            <ModalBody>
+              <AddCustomerComponent
+                handleSubmit={() => console.log()}
+                onSubmit={onSubmit}
+                control={control}
+              />
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+      )}
     </chakra.div>
   )
 }

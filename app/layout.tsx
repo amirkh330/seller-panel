@@ -93,6 +93,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
           role='group'
           borderRadius='lg'
           cursor='pointer'
+          onClick={() => onClose()}
           {...isActive(link.link)}
           _hover={{
             bg: 'cyan.400',

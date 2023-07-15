@@ -55,6 +55,22 @@
         "chunks": [],
         "async": false
       }
+    },
+    "(app-client)/./app/add-order/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/add-order/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/add-customer/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/add-customer/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
     }
   },
   "edgeSSRModuleMapping": {},
@@ -154,12 +170,30 @@
         "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
+    },
+    "D:\\projectes\\seller-panel\\app\\add-order\\page.tsx": {
+      "id": "(app-client)/./app/add-order/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/add-order/page:static/chunks/app/add-order/page.js"
+      ],
+      "async": false
+    },
+    "D:\\projectes\\seller-panel\\app\\add-customer\\page.tsx": {
+      "id": "(app-client)/./app/add-customer/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/add-customer/page:static/chunks/app/add-customer/page.js"
+      ],
+      "async": false
     }
   },
   "entryCSSFiles": {
     "D:\\projectes\\seller-panel\\app\\page": [],
     "D:\\projectes\\seller-panel\\app\\layout": [
       "static/css/app/layout.css"
-    ]
+    ],
+    "D:\\projectes\\seller-panel\\app\\add-order\\page": [],
+    "D:\\projectes\\seller-panel\\app\\add-customer\\page": []
   }
 }
