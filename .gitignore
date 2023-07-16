@@ -2,7 +2,7 @@
 logs
 *.log
 npm-debug.log*
-
+.next/
 # Runtime data
 pids
 *.pid
@@ -34,6 +34,7 @@ jspm_packages
 .npm
 
 # Optional REPL history
+
+next-env.d.ts
 .node_repl_history
-.next/
 .next

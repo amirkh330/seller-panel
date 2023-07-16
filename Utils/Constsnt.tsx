@@ -1,4 +1,6 @@
 import { Button } from '@chakra-ui/react'
+import Link from 'next/link'
+import { FaEye } from 'react-icons/fa'
 
 export const customers = [
   { label: 'آقای احمدی', value: '1' },
@@ -90,18 +92,27 @@ export const data = [
     '۳ مرداد',
     '۲/۰۰۰/۰۰۰',
     <Button colorScheme='blue'>موفقیت آمیز</Button>,
+    <Link href='/order/123'>
+      <FaEye />
+    </Link>,
   ],
   [
     'احمدی',
     '۳ مرداد',
     '۲/۰۰۰/۰۰۰',
     <Button colorScheme='green'>در حال بررسی</Button>,
+    <Link href='/order/123'>
+      <FaEye />
+    </Link>,
   ],
   [
     'احمدی',
     '۳ مرداد',
     '۲/۰۰۰/۰۰۰',
     <Button colorScheme='blue'>موفقیت آمیز</Button>,
+    <Link href='/order/123'>
+      <FaEye />
+    </Link>,
   ],
 ]
 

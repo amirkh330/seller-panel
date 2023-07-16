@@ -49,7 +49,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'داشبورد', icon: MdDashboardCustomize, link: '/' },
   { name: 'ثبت سفارش', icon: MdBorderColor, link: '/add-order' },
   { name: 'مالی', icon: FaDollarSign, link: '/finance' },
-  { name: 'لیست سفارشات', icon: BsFillClipboard2DataFill, link: '/order-list' },
+  { name: 'لیست سفارشات', icon: BsFillClipboard2DataFill, link: '/order' },
   { name: 'پیش نویس ها', icon: BsFillFileDiffFill, link: '/drafts' },
   { name: 'افزودن مشتری', icon: FaUserPlus, link: '/add-customer' },
   { name: 'لیست محصولات', icon: BsCartPlusFill, link: '/product-list' },

@@ -1,5 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/add-order/page": "app/add-order/page.js",
-  "/add-customer/page": "app/add-customer/page.js"
-}
