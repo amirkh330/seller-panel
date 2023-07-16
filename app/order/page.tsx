@@ -2,7 +2,7 @@
 import React from 'react'
 import { Card, Text } from '@chakra-ui/react'
 import { TableComponent } from '../../components/Table/Table'
-import { column, data } from '../../Utils/Constsnt'
+import { column, tableData } from '../../Utils/Constsnt'
 
 const page = () => {
   return (
@@ -10,7 +10,7 @@ const page = () => {
       <Text fontWeight='bold' fontSize='lg' mb='4' color='gray.700'>
         آخرین سفارشات
       </Text>
-      <TableComponent data={data} column={column} />
+      <TableComponent data={tableData} column={column} />
     </Card>
   )
 }

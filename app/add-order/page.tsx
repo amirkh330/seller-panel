@@ -19,10 +19,10 @@ import {
 } from '@chakra-ui/react'
 import { Select } from 'chakra-react-select'
 import { Controller } from 'react-hook-form'
-import { customers, products } from '../../Utils/Constsnt'
-import { TemporaryFactorTable } from '../../components/AddOrder/TemporaryFactorTable'
-import { useAddOrder } from './AddOrder.biz'
+import { customers, factorColumn, products } from '../../Utils/Constsnt'
 import { AddCustomerComponent } from '../../components/AddCustomer/AddCustomerComponent'
+import { TableComponent } from '../../components/Table/Table'
+import { useAddOrder } from './AddOrder.biz'
 
 const AddOrder = () => {
   const {
@@ -160,7 +160,11 @@ const AddOrder = () => {
           </Flex>
         </Card>
       </chakra.form>
-      {productList.length && <TemporaryFactorTable productList={productList} />}
+      {productList.length && (
+        <Card mt='4'>
+          <TableComponent data={productList} column={factorColumn} />
+        </Card>
+      )}
       {modalVisible && (
         <Modal isOpen={modalVisible} onClose={setModalVisible.off} size='xl'>
           <ModalOverlay />

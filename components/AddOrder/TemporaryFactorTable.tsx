@@ -10,13 +10,15 @@ import {
   Tr,
 } from '@chakra-ui/react'
 import React from 'react'
+import { TableComponent } from '../Table/Table'
 const column = ['محصول', 'تعداد', 'تخفیف']
 export const TemporaryFactorTable = ({ productList }: any) => (
   <Card p={{ base: 3, md: 6 }} mb='4'>
     <Text my='4' fontWeight='semibold' fontSize='md'>
       پیش فاکتور
     </Text>
-    <TableContainer>
+    <TableComponent data={productList} column={column} />
+    {/* <TableContainer>
       <Table variant='striped'>
         <Thead>
           <Tr>
@@ -45,6 +47,6 @@ export const TemporaryFactorTable = ({ productList }: any) => (
           })}
         </Tbody>
       </Table>
-    </TableContainer>
+    </TableContainer> */}
   </Card>
 )

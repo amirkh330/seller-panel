@@ -3,7 +3,7 @@ import { Card, Flex, Text } from '@chakra-ui/react'
 import { TableComponent } from '../Table/Table'
 import { BestSellers } from './components/BestSellers/BestSellers'
 import Link from 'next/link'
-import { column, data } from '../../Utils/Constsnt'
+import { column, tableData } from '../../Utils/Constsnt'
 
 const Dashboard = () => {
   return (
@@ -53,7 +53,7 @@ const Dashboard = () => {
       </Flex>
       <Card gap='4' p='4' mt='4'>
         <Text>آخرین سفارشات</Text>
-        <TableComponent data={data} column={column} />
+        <TableComponent data={tableData} column={column} />
       </Card>
       <Flex gap='4' mt='4' flexDir={{ base: 'column', md: 'row' }}>
         <Card
