@@ -44,17 +44,33 @@ interface LinkItemProps {
   name: string
   icon: any
   link: string
+  disabled?: boolean
 }
 const LinkItems: Array<LinkItemProps> = [
   { name: 'داشبورد', icon: MdDashboardCustomize, link: '/' },
   { name: 'ثبت سفارش', icon: MdBorderColor, link: '/add-order' },
-  { name: 'مالی', icon: FaDollarSign, link: '/finance' },
+  { name: 'مالی', icon: FaDollarSign, link: '/finance', disabled: true },
   { name: 'لیست سفارشات', icon: BsFillClipboard2DataFill, link: '/order' },
-  { name: 'پیش نویس ها', icon: BsFillFileDiffFill, link: '/drafts' },
+  {
+    name: 'پیش نویس ها',
+    icon: BsFillFileDiffFill,
+    link: '/drafts',
+    disabled: true,
+  },
   { name: 'افزودن مشتری', icon: FaUserPlus, link: '/add-customer' },
-  { name: 'لیست محصولات', icon: BsCartPlusFill, link: '/product-list' },
-  { name: 'برنامه ریزی', icon: BsFillClipboardCheckFill, link: '/todo' },
-  { name: 'اطلاعات فردی', icon: BsFillFilePersonFill, link: '/user-info' },
+  { name: 'لیست محصولات', icon: BsCartPlusFill, link: '/products' },
+  {
+    name: 'برنامه ریزی',
+    icon: BsFillClipboardCheckFill,
+    link: '/todo',
+    disabled: true,
+  },
+  {
+    name: 'اطلاعات فردی',
+    icon: BsFillFilePersonFill,
+    link: '/user-info',
+    disabled: true,
+  },
 ]
 
 interface SidebarProps extends BoxProps {
@@ -64,7 +80,7 @@ interface SidebarProps extends BoxProps {
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   const pathname = usePathname()
   const isActive = (link: string) =>
-    pathname === link && { bg: 'cyan.400', color: 'white' }
+    pathname === link && { bg: 'blue.700', color: 'white' }
   return (
     <Box
       transition='3s ease'
@@ -92,11 +108,11 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
           my='2'
           role='group'
           borderRadius='lg'
-          cursor='pointer'
+          cursor={link?.disabled ? 'no-drop' : 'pointer'}
           onClick={() => onClose()}
           {...isActive(link.link)}
           _hover={{
-            bg: 'cyan.400',
+            bg: 'blue.700',
             color: 'white',
           }}
         >
