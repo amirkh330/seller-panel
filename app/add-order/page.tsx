@@ -19,7 +19,7 @@ import {
 } from '@chakra-ui/react'
 import { Select } from 'chakra-react-select'
 import { Controller } from 'react-hook-form'
-import { customers, factorColumn, products } from '../../Utils/Constsnt'
+import { customers, factorColumn, products } from '../../Utils/Constants'
 import { AddCustomerComponent } from '../../components/AddCustomer/AddCustomerComponent'
 import { TableComponent } from '../../components/Table/Table'
 import { useAddOrder } from './AddOrder.biz'

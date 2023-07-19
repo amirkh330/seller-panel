@@ -18,35 +18,5 @@ export const TemporaryFactorTable = ({ productList }: any) => (
       پیش فاکتور
     </Text>
     <TableComponent data={productList} column={column} />
-    {/* <TableContainer>
-      <Table variant='striped'>
-        <Thead>
-          <Tr>
-            {column.map((col: any, index: number) => (
-              <Th
-                fontWeight='semibold'
-                color='gray.800'
-                fontSize='sm'
-                fontFamily='IRANSansXV'
-                key={index}
-              >
-                {col}
-              </Th>
-            ))}
-          </Tr>
-        </Thead>
-        <Tbody>
-          {productList.map((tr: any) => {
-            return (
-              <Tr>
-                <Td>{tr.product}</Td>
-                <Td>{tr.count}</Td>
-                <Td>{tr.discount ?? '----'}</Td>
-              </Tr>
-            )
-          })}
-        </Tbody>
-      </Table>
-    </TableContainer> */}
   </Card>
 )

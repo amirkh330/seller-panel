@@ -2,7 +2,7 @@
 import React from 'react'
 import { Card, Text } from '@chakra-ui/react'
 import { TableComponent } from '../../components/Table/Table'
-import { column, tableData } from '../../Utils/Constsnt'
+import { column, tableData } from '../../Utils/Constants'
 
 const page = () => {
   return (

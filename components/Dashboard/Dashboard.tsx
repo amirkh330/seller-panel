@@ -3,7 +3,7 @@ import { Card, Flex, Text } from '@chakra-ui/react'
 import { TableComponent } from '../Table/Table'
 import { BestSellers } from './components/BestSellers/BestSellers'
 import Link from 'next/link'
-import { column, tableData } from '../../Utils/Constsnt'
+import { column, tableData } from '../../Utils/Constants'
 
 const Dashboard = () => {
   return (
@@ -13,8 +13,8 @@ const Dashboard = () => {
           p='4'
           w={{ base: 'full', md: '50%' }}
           sx={{
-            backgroundColor: '#ff9d5e',
-            backgroundImage: 'linear-gradient(62deg, #ff9d5e 0%, #F7CE68 100%)',
+            backgroundColor: 'blue.500',
+            backgroundImage: 'linear-gradient(62deg,blue.400 0%,blue.900 100%)',
           }}
         >
           <Flex
@@ -33,9 +33,8 @@ const Dashboard = () => {
           p='4'
           w={{ base: 'full', md: '50%' }}
           sx={{
-            backgroundColor: '#8BC6EC',
-            backgroundImage:
-              'linear-gradient(135deg, #8BC6EC 0%, #4954ec 100%)',
+            backgroundColor: 'blue.500',
+            backgroundImage: 'linear-gradient(62deg,blue.900 0%,blue.400 100%)',
           }}
         >
           <Flex
@@ -60,8 +59,8 @@ const Dashboard = () => {
           w={{ base: 'full', md: '50%' }}
           as={Link}
           sx={{
-            backgroundColor: '#ff9d5e',
-            backgroundImage: 'linear-gradient(62deg, #ff9d5e 0%, #F7CE68 100%)',
+            backgroundColor: 'blue.500',
+            backgroundImage: 'linear-gradient(62deg,blue.400 0%,blue.900 100%)',
           }}
           href='/add-order'
         >
@@ -76,9 +75,8 @@ const Dashboard = () => {
           href='/offeres'
           w={{ base: 'full', md: '50%' }}
           sx={{
-            backgroundColor: '#8BC6EC',
-            backgroundImage:
-              'linear-gradient(135deg, #8BC6EC 0%, #4954ec 100%)',
+            backgroundColor: 'blue.500',
+            backgroundImage: 'linear-gradient(62deg,blue.900 0%,blue.400 100%)',
           }}
         >
           <Flex align='center' justifyContent='center' p='8'>

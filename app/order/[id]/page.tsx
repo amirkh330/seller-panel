@@ -1,7 +1,7 @@
 'use client'
 import { Card, Divider, Flex, Tag, Text } from '@chakra-ui/react'
 import { TableComponent } from '../../../components/Table/Table'
-import { FactorData, column } from '../../../Utils/Constsnt'
+import { FactorData, column } from '../../../Utils/Constants'
 
 const page = () => {
   return (

@@ -125,6 +125,64 @@ export const FactorData = [
   ['نوشابه پپسی خانواده', '20/000 تومان', '10', 10, '180/000 تومان'],
 ]
 
+export const ProductListColumn = [
+  'نام محصول',
+  'فی',
+  'موجودی',
+  'تخفیف',
+  'مشاهده ',
+]
+export const ProductListData = [
+  {
+    id: 1,
+    title: 'نوشابه کوکاکولا خانواده',
+    price: '20/000 تومان',
+    isExist: true,
+    discount: '5 %',
+    view: (
+      <Link href='/products/123'>
+        <FaEye />
+      </Link>
+    ),
+  },
+  {
+    id: 2,
+    title: 'نوشابه کوکاکولا کوچک',
+    price: '20/000 تومان',
+    isExist: true,
+    discount: '8 %',
+    view: (
+      <Link href='/products/123'>
+        <FaEye />
+      </Link>
+    ),
+  },
+  {
+    id: 3,
+    title: 'نوشابه پپسی خانواده',
+    price: '20/000 تومان',
+    isExist: false,
+    discount: 0,
+    view: (
+      <Link href='/products/123'>
+        <FaEye />
+      </Link>
+    ),
+  },
+  {
+    id: 4,
+    title: 'نوشابه پپسی خانواده',
+    price: '20/000 تومان',
+    isExist: true,
+    discount: ' 10 %',
+    view: (
+      <Link href='/products/123'>
+        <FaEye />
+      </Link>
+    ),
+  },
+]
+
 export const count = Array(499)
   .fill('')
   .map((i, _index) => _index++)
