@@ -5,12 +5,13 @@ const notFound = () => {
   return (
     <Box
       textAlign='center'
-      pt={{ base: 0, md: 66 }}
+      pt={{ base: 50, md: 0 }}
       m={{ base: '-4' }}
+      h='80dvh'
       bg='#e8f5fd'
     >
       <Center>
-        <Image src={'/images/404.png'} my='4' />
+        <Image src={'/images/404.png'} w={{ base: '80%', md: '50%' }} />
       </Center>
       <Heading as='h1' size='2xl' color='brand.500'>
         404 - Page Not Found
