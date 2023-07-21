@@ -1,8 +1,10 @@
 'use client'
 import { Button, Flex, Input, Text, chakra } from '@chakra-ui/react'
-import { Controller } from 'react-hook-form'
+import { Controller, useForm } from 'react-hook-form'
+
 export const AddCustomerComponent = (props: any) => {
-  const { handleSubmit, onSubmit, control } = props
+  const { control, register, handleSubmit } = useForm<any>()
+  const { onSubmit } = props
   return (
     <chakra.form onSubmit={handleSubmit(onSubmit)}>
       <Flex my='6' gap='4' flexWrap='wrap' justifyContent='space-between'>

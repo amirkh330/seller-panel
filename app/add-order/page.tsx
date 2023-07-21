@@ -23,6 +23,7 @@ import { customers, factorColumn, products } from '../../Utils/Constants'
 import { AddCustomerComponent } from '../../components/AddCustomer/AddCustomerComponent'
 import { TableComponent } from '../../components/Table/Table'
 import { useAddOrder } from './AddOrder.biz'
+import { ModalCheckOrder } from '../../components/AddOrder/ModalCheckOrder'
 
 const AddOrder = () => {
   const {
@@ -36,6 +37,11 @@ const AddOrder = () => {
     setSelectedProduct,
     modalVisible,
     setModalVisible,
+    AddCustomer,
+    selectedCustomer,
+    setSelectedCustomer,
+    modalCheckVisible,
+    setModalCheckVisible,
   } = useAddOrder()
 
   return (
@@ -59,7 +65,12 @@ const AddOrder = () => {
                 ایجاد مشتری جدید
               </Button>
             </Flex>
-            <Select placeholder='مشتری مورد نظر ' options={customers} />
+            <Select
+              options={customers}
+              value={selectedCustomer}
+              placeholder='مشتری مورد نظر'
+              onChange={(e) => setSelectedCustomer(e)}
+            />
           </Flex>
         </Card>
         <Card p='6' mb='4'>
@@ -157,14 +168,22 @@ const AddOrder = () => {
             >
               افزودن
             </Button>
+            {productList.length ? (
+              <Button
+                variant='outline'
+                onClick={() => setModalCheckVisible.on()}
+              >
+                ایجاد لینک پرداخت
+              </Button>
+            ) : null}
           </Flex>
         </Card>
       </chakra.form>
-      {productList.length && (
+      {productList.length ? (
         <Card mt='4'>
           <TableComponent data={productList} column={factorColumn} />
         </Card>
-      )}
+      ) : null}
       {modalVisible && (
         <Modal isOpen={modalVisible} onClose={setModalVisible.off} size='xl'>
           <ModalOverlay />
@@ -172,14 +191,17 @@ const AddOrder = () => {
             <ModalHeader>معرفی مشتری</ModalHeader>
             <ModalCloseButton w='95%' justifyContent='end' />
             <ModalBody>
-              <AddCustomerComponent
-                handleSubmit={() => console.log()}
-                onSubmit={onSubmit}
-                control={control}
-              />
+              <AddCustomerComponent onSubmit={AddCustomer} />
             </ModalBody>
           </ModalContent>
         </Modal>
+      )}
+      {modalCheckVisible && (
+        <ModalCheckOrder
+          modalCheckVisible={modalCheckVisible}
+          setModalCheckVisible={setModalCheckVisible}
+          productList={productList}
+        />
       )}
     </chakra.div>
   )
