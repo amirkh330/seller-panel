@@ -49,28 +49,27 @@ interface LinkItemProps {
 const LinkItems: Array<LinkItemProps> = [
   { name: 'داشبورد', icon: MdDashboardCustomize, link: '/' },
   { name: 'ثبت سفارش', icon: MdBorderColor, link: '/add-order' },
-  { name: 'مالی', icon: FaDollarSign, link: '/finance'},
+  { name: 'مالی', icon: FaDollarSign, link: '/finance' },
   { name: 'لیست سفارشات', icon: BsFillClipboard2DataFill, link: '/order' },
-  {
-    name: 'پیش نویس ها',
-    icon: BsFillFileDiffFill,
-    link: '/drafts',
-    disabled: true,
-  },
+  // {
+  //   name: 'پیش نویس ها',
+  //   icon: BsFillFileDiffFill,
+  //   link: '/drafts',
+  //   disabled: true,
+  // },
   { name: 'افزودن مشتری', icon: FaUserPlus, link: '/add-customer' },
   { name: 'لیست محصولات', icon: BsCartPlusFill, link: '/products' },
   {
     name: 'برنامه ریزی',
     icon: BsFillClipboardCheckFill,
     link: '/todo',
-    disabled: true,
   },
-  {
-    name: 'اطلاعات فردی',
-    icon: BsFillFilePersonFill,
-    link: '/user-info',
-    disabled: true,
-  },
+  // {
+  //   name: 'اطلاعات فردی',
+  //   icon: BsFillFilePersonFill,
+  //   link: '/user-info',
+  //   disabled: true,
+  // },
 ]
 
 interface SidebarProps extends BoxProps {
